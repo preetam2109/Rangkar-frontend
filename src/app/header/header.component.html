@@ -1,0 +1,161 @@
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<!-- <mat-toolbar color="primary">
+  <span>
+    Rangkar
+  </span>
+
+  <span class="space-buttons"></span>
+  <button *ngIf="! isLoggedIn()" routerLink="/login" mat-raised-button color="primary">
+    Login
+  </button>
+  <button *ngIf="isLoggedIn()" (click)="logout()" mat-raised-button color="warn">
+    Logout
+  </button>
+</mat-toolbar>
+
+<mat-toolbar color="primary" *ngIf="isLoggedIn()">
+  <button mat-raised-button color="primary" routerLink="/">Home</button>
+  <button *ngIf="!isAdmin()" mat-raised-button color="primary" routerLink="/cart">Cart</button>
+  <button *ngIf="!isAdmin()" mat-raised-button color="primary" routerLink="/myOrders">My Orders</button>
+  <button *ngIf="isAdmin()" mat-raised-button color="primary" routerLink="/addNewProduct">Add New Product</button>
+  <button *ngIf="isAdmin()" mat-raised-button color="primary" routerLink="/showProductDetails">Show Product Details</button>
+  <button *ngIf="isAdmin()" mat-raised-button color="primary" routerLink="/orderInformation">Order Information</button>
+</mat-toolbar> -->
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    Rangkar
+  </a>
+
+  <div class="space-buttons"></div>
+
+  <div class="navbar-nav ml-auto">
+    <ng-container *ngIf="!isLoggedIn()">
+      <a class="nav-item nav-link" routerLink="/login">Login</a>
+    </ng-container>
+    <ng-container *ngIf="isLoggedIn()">
+      <button class="btn btn-info" (click)="logout()">Logout</button>
+    </ng-container>
+  </div>
+</nav> -->
+
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark" *ngIf="isLoggedIn()">
+  <a class="navbar-brand" routerLink="/">Home</a>
+
+  <div class="navbar-nav ml-auto">
+    <ng-container *ngIf="!isAdmin()">
+      <a class="nav-item nav-link" routerLink="/cart">Cart</a>
+      <a class="nav-item nav-link" routerLink="/myOrders">My Orders</a>
+    </ng-container>
+    <ng-container *ngIf="isAdmin()">
+      <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Admin Actions
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/addNewProduct">Add New Product</a>
+          <a class="dropdown-item" routerLink="/showProductDetails">Show Product Details</a>
+          <a class="dropdown-item" routerLink="/orderInformation">Order Information</a>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</nav> -->
+<!-- <nav class="navbar navbar-expand-lg py-3 navbar-dark bg-dark">
+  <div><a routerLink="" class="navbar-brand">RANGKAR</a></div>
+
+  
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-end " id="navbarContent">
+
+    <div class="navbar-nav ml-auto">
+      <ng-container *ngIf="isLoggedIn()">
+        <button class="nav-item nav-link btn btn-danger " (click)="logout()">Logout</button>
+      </ng-container>
+      <ng-container *ngIf="!isLoggedIn()">
+        <a class="nav-item nav-link ml-auto" routerLink="/login">Login</a>
+      </ng-container>
+    </div>
+
+
+
+
+
+    <ul class="navbar-nav ml-auto">
+      <ng-container *ngIf="isLoggedIn()">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Home</a>
+        </li>
+        <ng-container *ngIf="!isAdmin()">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/cart">Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/myOrders">My Orders</a>
+          </li>
+        </ng-container>
+         <ng-container *ngIf="isAdmin()">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/addNewProduct">Add New Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/showProductDetails">Show Product Details</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/orderInformation">Order Information</a>
+          </li>
+        </ng-container>
+      </ng-container>
+    </ul>
+  </div>
+</nav>
+ -->
+ <nav id="nvbar" class="navbar navbar-expand-lg navbar-dark bg-info">
+  <a class="navbar-brand" href="#">
+    <img class="" src="assets/149900863_padded_logo.png" alt="Logo" width="100" height="100">
+  </a>
+
+  <!-- <input type="checkbox" id="navbar-toggle-cbox" class="navbar-toggler-cbox visually-hidden">
+  <label for="navbar-toggle-cbox" class="navbar-toggler">
+    <span class="navbar-toggler-icon"></span>
+  </label> -->
+
+  <div class="navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" *ngIf="isLoggedIn()">
+        <a class="nav-link" routerLink="/">Home</a>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn() && !isAdmin()">
+        <a class="nav-link" routerLink="/cart">Cart</a>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn() && !isAdmin()">
+        <a class="nav-link" routerLink="/myOrders">My Orders</a>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn() && isAdmin()">
+        <a class="nav-link" routerLink="/addNewProduct">Add New Product</a>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn() && isAdmin()">
+        <a class="nav-link" routerLink="/showProductDetails">Show Product Details</a>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn() && isAdmin()">
+        <a class="nav-link" routerLink="/orderInformation">Order Information</a>
+      </li>
+    </ul>
+
+    <div class="navbar-nav">
+      <ng-container *ngIf="isLoggedIn()">
+        <a class="p-2 nav-link text-white" (click)="logout()">Logout</a>
+      </ng-container>
+      <ng-container *ngIf="!isLoggedIn()">
+        <a class="nav-item nav-link" (click)="registerUser()">Register</a>
+        <a class="nav-item nav-link" routerLink="/login">Login</a>
+      </ng-container>
+    </div>
+  </div>
+</nav>

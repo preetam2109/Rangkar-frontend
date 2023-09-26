@@ -1,0 +1,27 @@
+.carousel {
+  position: relative;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel button:first-child {
+  left: 0;
+}
+
+.carousel button:last-child {
+  right: 0;
+}
+
+.carousel img {
+  width: 100%; /* Set the desired width */
+  height: 500px; /* Automatically adjust the height to maintain aspect ratio */
+}

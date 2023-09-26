@@ -1,0 +1,29 @@
+.space-buttons {
+    flex: 1 1 auto;
+}
+
+.navbar {
+    background-color:rgba(17,17,17,255) /* Set the background color to black */
+  }
+
+
+
+
+
+  /* Custom CSS for displaying nav links on mobile */
+
+/* Override Bootstrap's behavior for mobile */
+@media (max-width: 767.98px) {
+    .navbar-nav {
+      display: flex !important;
+      flex-direction: column;
+    }
+  
+    .navbar-nav .nav-item {
+      margin: 0.25rem 0;
+      width: 100%; /* Ensure full width for nav items */
+    }
+  }
+
+  
+  

@@ -1,0 +1,39 @@
+/* body {
+    padding-bottom: -1px;
+  }
+  
+  footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+   */
+/* Adjust the height and padding as needed */
+/* footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+  } */
+  .page-content {
+    flex: 1; /* This will push the footer to the bottom */
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  footer {
+    width: 100%;
+    /* position: fixed; */
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+  }
+  body {
+    padding-bottom: 60px; /* Adjust this value to match the height of your footer */
+  }
+  

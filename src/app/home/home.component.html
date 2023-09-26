@@ -1,0 +1,129 @@
+
+
+
+
+<div class="card carousel p-3 slide" data-ride="carousel">
+   <div class="carousel-inner">
+     <div class="carousel-item" *ngFor="let image of images; let i = index" [ngClass]="{'active': i === currentImageIndex}">
+       <img [src]="image" alt="Slide {{ i + 1 }}">
+       <div class="carousel-caption d-none d-md-block">
+         <h5 class="text-white mb-4"style="font-size: 50px;">{{ titles[i] }}</h5>
+         <p class="text-white"style="font-size: 20px;">{{ descriptions[i] }}</p>
+       </div>
+     </div>
+   </div>
+   <a class="carousel-control-prev" (click)="prevSlide()" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" (click)="nextSlide()" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+ </div>
+ 
+
+<!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+   <ol class="carousel-indicators">
+     <li *ngFor="let image of images; let i = index" [class.active]="i === 0" [attr.data-slide-to]="i"></li>
+   </ol>
+   <div class="carousel-inner">
+     <div class="carousel-item" *ngFor="let image of images; let i = index" [class.active]="i === 0">
+       <img class="d-block w-100" [src]="image" [alt]="'Slide ' + (i + 1)">
+     </div>
+   </div>
+   <a class="carousel-control-prev" (click)="prevSlide()" role="button" data-slide="prev">
+     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+     <span class="sr-only">Previous</span>
+   </a>
+   <a class="carousel-control-next" (click)="nextSlide()" role="button" data-slide="next">
+     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+     <span class="sr-only">Next</span>
+   </a>
+ </div> -->
+ 
+
+
+
+
+
+
+<!-- <div class="container mt-5">
+
+   <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Search any product</mat-label>
+      <input matInput #searchkeyword (keyup)="searchByKeyword(searchkeyword.value)" name="searchKey" id="searchKey"
+         placeholder="Search any product">
+      <mat-hint>Search any product</mat-hint>
+   </mat-form-field>
+
+   <mat-grid-list cols="4" rowHeight="3:5" gutterSize="10">
+      <mat-grid-tile *ngFor="let p of productDetails">
+         <div class="row p-5">
+            <div class="image-container">
+               <img class="home-page-product-image" [src]="p.productImages[0].url" alt="">
+            </div>
+            <div class="mt-3">
+               <p><b>{{p.productName}}</b></p>
+            </div>
+            <div class="mt-2">
+               <p style="white-space: inherit; height: 40px; width: 288px; overflow: hidden; text-overflow: ellipsis;">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos sed eaque molestias iste repudiandae in
+                  quos distinctio rem excepturi expedita incidunt, doloremque id sequi perferendis ipsum. Maxime ad iste
+                  eius.</p>
+            </div>
+            <div class="mt-2">
+               <b>Rs. {{p.productDiscountedPrice}}</b> &nbsp; <b
+                  style="text-decoration: line-through;">{{p.productActualPrice}}</b>
+            </div>
+            <div class="mt-2">
+               <button type="button" mat-raised-button color="warn" (click)="showProductDetails(p.productId)">View
+                  Details</button>
+            </div>
+         </div>
+      </mat-grid-tile>
+   </mat-grid-list>
+
+   <div class="text-center mt-5" style="padding-bottom: 100px;" *ngIf="showLoadButton">
+      <button type="button" mat-raised-button color="primary" (click)="loadMoreProduct()"> Load more</button>
+   </div>
+
+   <div class="mt-5">
+
+   </div>
+</div> -->
+<div class="container mt-5">
+   <div class="container d-flex justify-content-end">
+      <h1 class="display-5 w-100 mt-3 "style="font-size: 30px; font-family: 'Oswald', sans-serif;  " >All Products</h1>
+      <div class="form-group">
+         <label for="searchKey">Search any product</label>
+         <input type="text" class="form-control" id="searchKey" #searchkeyword (keyup)="searchByKeyword(searchkeyword.value)" name="searchKey" placeholder="Search any product" style="width: 100%;"  >
+         <small class="form-text text-muted">Search any product</small>
+      </div>
+   </div>
+
+   <div class="row mt-4">
+      <div class="col-md-3" *ngFor="let p of productDetails">
+         <div class="card border-3 border-light p-3 mb-5 bg-light rounded shadow">
+            <img class="card-img-top rounded-full border-8 border-white mt-5 mx-auto img-fluid" [src]="p.productImages[0].url" alt="">
+            <div class="mt-3">
+               <p><b>{{p.productName}}</b></p>
+            </div>
+            <div class="mt-2">
+               <p class="card-text" style="white-space: inherit; height: 40px; width: 288px; overflow: hidden; text-overflow: ellipsis;">
+                  {{p.productDescription}}</p>
+            </div>
+            <div class="mt-2">
+               <b>Rs. {{p.productDiscountedPrice}}</b> &nbsp; <b style="text-decoration: line-through;">{{p.productActualPrice}}</b>
+            </div>
+            <div class="mt-2">
+               <button type="button" class="btn btn-info" (click)="showProductDetails(p.productId)">View Details</button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="text-center mt-5" style="padding-bottom: 100px;" *ngIf="showLoadButton">
+      <button type="button" class="btn btn-info" (click)="loadMoreProduct()"> Load more</button>
+   </div>
+</div>
