@@ -497,7 +497,7 @@
     /***/
     function _(module, exports, __webpack_require__) {
       __webpack_require__(
-      /*! /Users/nihal/Angular/e-commerce-youtube-ui-main/node_modules/@angular-devkit/build-angular/src/webpack/es5-polyfills.js */
+      /*! /Users/nihal/spring-boot/rangkar-frontend/node_modules/@angular-devkit/build-angular/src/webpack/es5-polyfills.js */
       "voQr");
 
       __webpack_require__(
@@ -505,7 +505,7 @@
       "R0gw");
 
       module.exports = __webpack_require__(
-      /*! /Users/nihal/Angular/e-commerce-youtube-ui-main/src/polyfills.ts */
+      /*! /Users/nihal/spring-boot/rangkar-frontend/src/polyfills.ts */
       "hN/g");
       /***/
     },

@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/nihal/Angular/e-commerce-youtube-ui-main/src/polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! /Users/nihal/spring-boot/rangkar-frontend/src/polyfills.ts */"hN/g");
 
 
 /***/ }),

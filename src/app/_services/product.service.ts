@@ -13,19 +13,19 @@ export class ProductService {
   constructor(private httpClient: HttpClient) { }
 
   public createTransaction(amount) {
-    return this.httpClient.get("http://localhost:9090/createTransaction/"+amount);
+    return this.httpClient.get("https://rangkar-production.up.railway.app/createTransaction/"+amount);
   }
 
   public markAsDelivered(orderId) {
-      return this.httpClient.get("http://localhost:9090/markOrderAsDelivered/"+orderId)
+      return this.httpClient.get("https://rangkar-production.up.railway.app/markOrderAsDelivered/"+orderId)
   }
 
   public getAllOrderDetailsForAdmin(status: string): Observable<MyOrderDetails[]> {
-    return this.httpClient.get<MyOrderDetails[]>("http://localhost:9090/getAllOrderDetails/"+status);
+    return this.httpClient.get<MyOrderDetails[]>("https://rangkar-production.up.railway.app/getAllOrderDetails/"+status);
   }
 
   public getMyOrders(): Observable<MyOrderDetails[]> {
-    return this.httpClient.get<MyOrderDetails[]>("http://localhost:9090/getOrderDetails");
+    return this.httpClient.get<MyOrderDetails[]>("https://rangkar-production.up.railway.app/getOrderDetails");
   }
 
   public deleteCartItem(cartId) {
