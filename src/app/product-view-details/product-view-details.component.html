@@ -1,50 +1,48 @@
 <div class="container mt-5">
-
     <div class="row">
-        <div class="col-6">
-
+        <div class="col-md-6">
             <div class="card image-container p-3">
-                <img [src]="product.productImages[selectedProductIndex].url" class="product-zoom-image">
+                <img [src]="product.productImages[selectedProductIndex].url" class="img-fluid product-zoom-image">
             </div>
 
             <div class="mt-2">
                 <mat-grid-list cols="3" gutterSize="10" rowHeight="1:1">
-                    <mat-grid-tile *ngFor="let file of product.productImages; let i = index;" (click)="changeIndex(i)" style="border: 1px solid lightgrey; cursor: pointer;">
-                        <img [src]="file.url" height="100px" >
+                    <mat-grid-tile *ngFor="let file of product.productImages; let i = index;" (click)="changeIndex(i)"
+                        style="border: 1px solid lightgrey; cursor: pointer;">
+                        <img [src]="file.url" height="100px">
                     </mat-grid-tile>
                 </mat-grid-list>
             </div>
-           
         </div>
-        <div class="col-6">
-            <div class="product-information">
+
+        <div class="col-md-6">
+            <div class="product-information mt-3">
+                <h2>{{product.productName}}</h2>
                 <div class="mt-3">
-                    <h2>{{product.productName}}</h2>
+                    <p>Description:</p>
+                    <p>{{product.productDescription}}</p>
                 </div>
                 <div class="mt-3">
-                    Description: <br>
-                    {{product.productDescription}}
-                </div>
-                <div class="mt-3">
-                    <b>Rs. {{product.productDiscountedPrice}}</b>&nbsp;&nbsp;<b style="text-decoration: line-through;">{{product.productActualPrice}}</b>
+                    <p><b>Rs. {{product.productDiscountedPrice}}</b>&nbsp;&nbsp;<b
+                            style="text-decoration: line-through;">{{product.productActualPrice}}</b></p>
                 </div>
                 <div class="mt-5 text-center">
-                    <button mat-raised-button color="warn" style="width: 200px;" (click)="buyProduct(product.productId)"> Buy Now</button>
-                    &nbsp;
-                    <button mat-raised-button style="width: 200px;" (click)="addToCart(product.productId)">Add to Cart</button>
+                    <button mat-raised-button color="warn" style="width: 100%;" (click)="buyProduct(product.productId)">Buy
+                        Now</button>
+                    <div class="mt-2"></div>
+                    <button mat-raised-button style="width: 100%;" (click)="addToCart(product.productId)">Add to Cart
+                    </button>
                 </div>
-                
-                <div *ngIf="product.productName ==='Portrait' ">
-                    <div class="d-flex justify-content-end  col-7">
+
+                <div *ngIf="product.productName ==='Portrait' " class="mt-3">
+                    <div class="d-flex justify-content-end">
                         <div>
                             <div class="dropzone" appDrag (files)="fileDropped($event)">
                                 <div class="text-wrapper">
-                                    <div style="height: 90px;" class="card border shadow mt-4 p-1  ">
-                                        upload your photo
-                                        <a  (click)="selectFile.click()" class="browse-button">Here</a>
-                                        
+                                    <div style="height: 90px;" class="card border shadow mt-4 p-1">
+                                        Upload your photo
+                                        <a (click)="selectFile.click()" class="browse-button">Here</a>
                                     </div>
-        
                                 </div>
                             </div>
                             <input multiple type="file" style="display: none;" #selectFile value="select"
@@ -53,12 +51,7 @@
                         <div class="mt-5">
                             <div class="row">
                                 <mat-grid-list cols="4" rowHeight="1:1">
-                                    <!-- <mat-grid-tile *ngFor="let file of product.productImages; let i = index;">
-                                        <div style="position: relative">
-                                            <span class="btn-remove-image" (click)="removeImages(i)">x</span>
-                                            <img [src]="file.url" width="100px" height="100px">
-                                        </div>
-                                    </mat-grid-tile> -->
+                                    <!-- Add image display logic here if needed -->
                                 </mat-grid-list>
                             </div>
                         </div>
