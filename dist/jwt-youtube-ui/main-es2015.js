@@ -2867,16 +2867,16 @@ class ProductService {
         this.httpClient = httpClient;
     }
     createTransaction(amount) {
-        return this.httpClient.get("http://localhost:9090/createTransaction/" + amount);
+        return this.httpClient.get("https://rangkar-production.up.railway.app/createTransaction/" + amount);
     }
     markAsDelivered(orderId) {
-        return this.httpClient.get("http://localhost:9090/markOrderAsDelivered/" + orderId);
+        return this.httpClient.get("https://rangkar-production.up.railway.app/markOrderAsDelivered/" + orderId);
     }
     getAllOrderDetailsForAdmin(status) {
-        return this.httpClient.get("http://localhost:9090/getAllOrderDetails/" + status);
+        return this.httpClient.get("https://rangkar-production.up.railway.app/getAllOrderDetails/" + status);
     }
     getMyOrders() {
-        return this.httpClient.get("http://localhost:9090/getOrderDetails");
+        return this.httpClient.get("https://rangkar-production.up.railway.app/getOrderDetails");
     }
     deleteCartItem(cartId) {
         return this.httpClient.delete("https://rangkar-production.up.railway.app/deleteCartItem/" + cartId);

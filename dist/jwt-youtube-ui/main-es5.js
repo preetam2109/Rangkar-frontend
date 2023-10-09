@@ -5895,22 +5895,22 @@
         _createClass(ProductService, [{
           key: "createTransaction",
           value: function createTransaction(amount) {
-            return this.httpClient.get("http://localhost:9090/createTransaction/" + amount);
+            return this.httpClient.get("https://rangkar-production.up.railway.app/createTransaction/" + amount);
           }
         }, {
           key: "markAsDelivered",
           value: function markAsDelivered(orderId) {
-            return this.httpClient.get("http://localhost:9090/markOrderAsDelivered/" + orderId);
+            return this.httpClient.get("https://rangkar-production.up.railway.app/markOrderAsDelivered/" + orderId);
           }
         }, {
           key: "getAllOrderDetailsForAdmin",
           value: function getAllOrderDetailsForAdmin(status) {
-            return this.httpClient.get("http://localhost:9090/getAllOrderDetails/" + status);
+            return this.httpClient.get("https://rangkar-production.up.railway.app/getAllOrderDetails/" + status);
           }
         }, {
           key: "getMyOrders",
           value: function getMyOrders() {
-            return this.httpClient.get("http://localhost:9090/getOrderDetails");
+            return this.httpClient.get("https://rangkar-production.up.railway.app/getOrderDetails");
           }
         }, {
           key: "deleteCartItem",
