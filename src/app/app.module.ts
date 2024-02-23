@@ -38,6 +38,7 @@ import { OrderDetailsComponent } from './order-details/order-details.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
+import { SplashScreenComponent } from './splash-screen/splash-screen.component';
 // import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
@@ -62,6 +63,7 @@ import { AboutComponent } from './about/about.component';
     OrderDetailsComponent,
     FooterComponent,
     AboutComponent,
+    SplashScreenComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,7 @@ import { UserAuthService } from './user-auth.service';
   providedIn: 'root',
 })
 export class UserService {
-  PATH_OF_API = 'https://rangkar-production.up.railway.app';
+  PATH_OF_API = 'https://rangkar-docker-v1.onrender.com';
 
   requestHeader = new HttpHeaders({ 'No-Auth': 'True' });
   constructor(
@@ -55,3 +55,4 @@ export class UserService {
     }
   }
 }
+
